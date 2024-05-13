@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <title>Castaway</title>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=0b01a210-9eb1-43fb-948e-7aca471278a7&lang=ru_RU"></script>
+
+</head>
+
+
+<body>
+<!--Logo+navigation--> 
+    <div class="nav">
+         <div class="nav__logo">castaway</div>
+       <div class="nav__items">
+            <a href="#title" class="nav__item">Home</a>
+            <a href="#latest__episod" class="nav__item">Episodes</a>
+            <a href="#profile" class="nav__item">About</a>
+            <a href="#footer" class="nav__item">Contact</a>
+        </div>
+
+
+        <div class="nav__burger">
+            <button class="btn__burger" type="button">
+                <span></span>
+            </button>
+            <ul class="menu__burger none">
+                <li><a href="#title" class="nav__item">Home</a></li>
+                <li><a href="#latest__episod" class="nav__item">Episodes</a></li>
+                <li><a href="#profile" class="nav__item">About</a></li>
+                <li><a href="#footer" class="nav__item">Contact</a></li>
+            </ul>
+        </div>
+    </div> <!--/Logo+navigation-->
+
+
+    <div class="container">
+        <div class="title" id="title"><!--Title-->
+           <div class="welcome__img"></div>
+            <div class="welcome__text">
+            Take your podcast to the <span class="welcome__text__next">next</span> <span class="welcome__text__level">level</span>
+            <div class="welcome__social"> <!--welcome__social-->
+                <p class="Listen__on">Listen on</p>
+                <div class="welcome__social__items">
+                    <a href="#" class="welcome__social__link"><img class="welcome__social__spotify" src="./Styles/img/spotify-color-svgrepo-com.svg"></a>
+                    <a href="#" class="welcome__social__link"><img class="welcome__social__spotify" src="./Styles/img/spotify-color-svgrepo-com.svg"></a>
+                    <a href="#" class="welcome__social__link"><img class="welcome__social__spotify" src="./Styles/img/spotify-color-svgrepo-com.svg"></a>
+                    <a href="#" class="welcome__social__link"><img class="welcome__social__spotify" src="./Styles/img/spotify-color-svgrepo-com.svg"></a>
+                    <a href="#" class="welcome__social__link"><img class="welcome__social__spotify" src="./Styles/img/spotify-color-svgrepo-com.svg"></a>
+                </div> 
+            </div><!--/welcome__social-->
+        </div>
+        </div><!--/Title-->
+
+    <!--Tabs-->
+        <div class="latest__episod" id="latest__episod">
+            <div class="latest__episod__text">Latest episodes</div>
+            <div><button class="btn latest__episod__btn" type="button">View all episodes</button></div>
+        </div>
+
+
+        <div class="litte__table">
+            <span class="tab__theme">Gear</span>
+            <a href="#" class="litte__table__link">Episode 3</a>
+        </div>
+       
+
+        <div class="tab none">
+            <div class="tab__img"><img src="./Styles/img/529b6efc25efc3e321d6655835061406.jpg"></div>           
+            <div class="tab__text">
+                <div class="tab__theme">Gear</div>
+                <div class="tab__number">Episode <span class="number_three">3</span></div>
+                <div class="tab__title">Should you get outboard audio gear?</div>
+                <div class="tab__text__item">Is hardware really worth it when it comes to podcasting? The answer is...it depends. Here&#39s our reasons on why you might want to consider picking something up.</div>
+                <button class="btn tab__btn" type="button">View Episode Details</button>
+            </div>
+        </div>
+
+
+        <div class="litte__table">
+            <span class="tab__theme">Tips & Tricks</span>
+            <a href="#" class="litte__table__link">Episode 2</a>
+        </div>
+
+
+        <div class="tab none">
+            <div class="tab__img"><img src="./Styles/img/297660480ff9140760d8f8d49c3b802b.jpg"></div>
+            <div class="tab__text">
+                <div class="tab__theme">Tips & Tricks</div>
+                <div class="tab__number">Episode <span class="number_three">2</span></div>
+                <div class="tab__title">Mic tricks to take you to the next level</div>
+                <div class="tab__text__item">Stop rolling with those default settings on your mic. These small tweaks will take you from sounding good to great.</div>
+                <button class="btn tab__btn" type="button">View Episode Details</button>
+            </div>
+        </div>
+
+        <div class="litte__table">
+            <span class="tab__theme">Gear</span>
+            <a href="#" class="litte__table__link">Episode 1</a>
+        </div>
+
+
+        <div class="tab none">
+            <div class="tab__img"><img src="./Styles/img/97be37456f84917e644d4c5caa3c2850.jpg"></div>
+            <div class="tab__text">
+                <div class="tab__theme">Gear</div>
+                <div class="tab__number">Episode <span class="number_three">1</span></div>
+                <div class="tab__title"> The best microphone under $200</div>
+                <div class="tab__text__item">With so many microphones on the market, how are you supposed to know what&#39s the best? Take a look at our top picks.</div>
+                <button class="btn tab__btn" type="button">View Episode Details</button>
+            </div>
+        </div>
+    <!--/Tabs-->
+
+    <!--Profiles-->
+        <div class="profile" id="profile">
+            <div class="profile__text">
+                <button class="btn profile__btn" type="button"><img src="./Styles/img/arrow-right-svgrepo-com.svg"></button>
+                <div class="profile__slogan">Meet your host</div>
+                <div class="profile__title"> Jacob Paulaner</div>
+                <div class="profile__text__item">Jacob has a background in audio engineering, and has been podcasting since the early days.</div>
+                <div class="profile__text__item">He&#39s here to help you level up your game by sharing everything he&#39s learned along the way.</div>
+            </div>
+            <div class="profile__img"><img src="./Styles/img/Profile.png"></div>
+        </div>
+
+        <div class="profile none">
+            <div class="profile__text">
+                <button class="btn profile__btn" type="button"><img src="./Styles/img/arrow-right-svgrepo-com.svg"></button>
+                <div class="profile__slogan">Meet your host</div>
+                <div class="profile__title"> Jacob Paulaner</div>
+                <div class="profile__text__item">Jacob has a background in audio engineering, and has been podcasting since the
+                    early days.</div>
+                <div class="profile__text__item">He&#39s here to help you level up your game by sharing everything he&#39s
+                    learned along the way.</div>
+            </div>
+            <div class="profile__img"><img src="./Styles/img/297660480ff9140760d8f8d49c3b802b.jpg"></div>
+        </div>
+
+        <div class="profile none">
+            <div class="profile__text">
+                <button class="btn profile__btn" type="button"><img src="./Styles/img/arrow-right-svgrepo-com.svg"></button>
+                <div class="profile__slogan">Meet your host</div>
+                <div class="profile__title"> Jacob Paulaner</div>
+                <div class="profile__text__item">Jacob has a background in audio engineering, and has been podcasting since the
+                    early days.</div>
+                <div class="profile__text__item">He&#39s here to help you level up your game by sharing everything he&#39s
+                    learned along the way.</div>
+            </div>
+            <div class="profile__img"><img src="./Styles/img/529b6efc25efc3e321d6655835061406.jpg"></div>
+        </div>
+
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    <!--/Profiles-->
+
+    <!--Subscribe-->
+        <div class="subscribe">
+            <div class="subscribe__text">
+                <div class="subscribe__number">Email Newsletter</div>
+                <div class="subscribe__title"> Subscribe for updates</div>
+            </div>
+            <form>
+                <input  class="subscribe__input" type="text" placeholder="Name">
+                <input class="subscribe__input" type="email" placeholder="Email">
+                <button class="btn subscribe__btn" type="submit">Submit</button>
+            </form>
+        </div>
+    <!--/Subscribe-->
+
+    <!--Feedback-->
+    <div class="feedback">
+        <div class="feedback__item">
+            <img src="./Styles/img/Star.png">
+            <div class="feedback__text">I can&#39t recommend this podcast enough</div>
+            <div class="feedback__autor">Betty Lacey</div>
+        </div>
+        <div class="feedback__item">
+            <img src="./Styles/img/Star.png">
+            <img src="./Styles/img/Star.png">
+            <div class="feedback__text">I can&#39t recommend this podcast enough</div>
+            <div class="feedback__autor">Betty Lacey</div>
+        </div>
+        <div class="feedback__item">
+            <img src="./Styles/img/Star.png">
+            <img src="./Styles/img/Star.png">
+            <img src="./Styles/img/Star.png">
+            <div class="feedback__text">I can&#39t recommend this podcast enough</div>
+            <div class="feedback__autor">Betty Lacey</div>
+        </div>
+        <div class="feedback__item">
+            <img src="./Styles/img/Star.png">
+            <img src="./Styles/img/Star.png">
+            <img src="./Styles/img/Star.png">
+            <img src="./Styles/img/Star.png">
+            <div class="feedback__text">I can&#39t recommend this podcast enough</div>
+            <div class="feedback__autor">Betty Lacey</div>
+        </div>
+        <div class="feedback__item">
+            <img src="./Styles/img/Star.png">
+            <img src="./Styles/img/Star.png">
+            <img src="./Styles/img/Star.png">
+            <img src="./Styles/img/Star.png">
+            <img src="./Styles/img/Star.png">
+            <div class="feedback__text">I can&#39t recommend this podcast enough</div>
+            <div class="feedback__autor">Betty Lacey</div>
+        </div>
+        <div class="feedback__item">
+            <img src="./Styles/img/Star.png">
+            <img src="./Styles/img/Star.png">
+            <img src="./Styles/img/Star.png">
+            <div class="feedback__text">I can&#39t recommend this podcast enough</div>
+            <div class="feedback__autor">Betty Lacey</div>
+        </div>
+    </div>
+    <!--/Feedback-->
+
+    <!--Map-->
+
+    <div class="map" id="map"></div>
+
+    <!--/Map-->
+
+    <!--Footer-->
+    <div class="footer" id="footer">
+        <div class="footer__title">
+            <div class="footer__logo">castaway</div>
+            <a href="#"><img src="./Styles/img/insta.png"></a>
+            <a href="#"><img src="./Styles/img/facebook.png"></a>
+            <a href="#"><img src="./Styles/img/twit.png"></a>
+        </div>
+        <ul class="footer__list">
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">episodes</a></li>
+            <li><a href="#">contacts</a></li>
+        </ul>
+        <ul class="footer__list">
+            <li><a href="#">Style Guide</a></li>
+            <li><a href="#">Instructions</a></li>
+            <li><a href="#">Changelog</a></li>
+            <li><a href="#">Credit</a></li>
+            <li><a href="#">Powered by Webflow</a></li>
+            <li><a href="#">Licenses</a></li>
+        </ul>
+        <div class="welcome__social__items">
+            <a href="#" class="welcome__social__link"><img class="welcome__social__spotify"
+                    src="./Styles/img/spotify-color-svgrepo-com.svg"></a>
+            <a href="#" class="welcome__social__link"><img class="welcome__social__spotify"
+                    src="./Styles/img/spotify-color-svgrepo-com.svg"></a>
+            <a href="#" class="welcome__social__link"><img class="welcome__social__spotify"
+                    src="./Styles/img/spotify-color-svgrepo-com.svg"></a>
+            <a href="#" class="welcome__social__link"><img class="welcome__social__spotify"
+                    src="./Styles/img/spotify-color-svgrepo-com.svg"></a>
+            <a href="#" class="welcome__social__link"><img class="welcome__social__spotify"
+                    src="./Styles/img/spotify-color-svgrepo-com.svg"></a>
+        </div>
+    </div>
+    <!--/Footer-->
+  </div> <!--/container-->
+
+    <script src="JS/main.js"></script>
+   
+
+</body>
+</html>
+
