@@ -1,0 +1,71 @@
+.aboutTravel {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 100px;
+    width: 100%;
+}
+
+.aboutTravel__media{
+    position: relative;
+    width: 40%;
+}
+
+.aboutTravel__text{
+    width: 50%;
+
+    margin: 64px 0;
+    text-align: start;
+}
+
+.aboutTravel__supPicture{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    border-radius: 24px;
+    width: 350px;
+    height: 400px;
+}
+
+.aboutTravel__video{
+    position: absolute;
+    
+    top: 25%;
+    left: 35%;
+    
+     border-radius: 24px;
+     width: 350px;
+    height: 400px;
+}
+
+.article__discription{
+    margin: 40px 0;
+    
+    font-size: 18px;
+    line-height: 150%;
+}
+
+@media (max-width: 1055px) {
+    .aboutTravel__media {
+        display: none;
+    }
+
+    .aboutTravel__text{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutTravel {
+        margin-top: 0;
+    }
+
+    .aboutTravel__text {
+        margin: 64px 0 0 0;
+    }
+}
+
+
+
