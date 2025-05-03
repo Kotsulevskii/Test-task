@@ -1,0 +1,92 @@
+/* Стили для навигационное панели */
+
+.nav-carousel-container {
+    display: flex;
+    align-items: center;
+
+    max-width: 100%;
+    margin: 0 auto;
+
+    position: relative;
+  }
+  
+  .nav-carousel {
+    width: 100%;
+
+    overflow: hidden;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 15px;
+
+    padding: 0;
+    margin: 0;
+
+    list-style-type: none;
+    white-space: nowrap;
+  }
+  
+  .nav-item {
+    display: inline-flex;
+
+    padding: 8px 16px;
+
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .nav-item:hover {
+    background: #f1f1f1;
+  }
+  
+  .nav-item.active {
+    background: #0656B4;
+    color: #DFE9F5;
+  }
+  
+  .nav-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 36px;
+    height: 36px;
+
+    background-color: #ffffff00;
+    border: none;
+    border-radius: 50%;
+   
+    font-size: 16px;
+    cursor: pointer;
+   
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+  
+  .nav-arrow-left {
+    margin-right: 10px;
+  }
+  
+  .nav-arrow-right {
+    margin-left: 10px;
+  }
+  
+  /* Скрываем стрелки, когда прокрутка невозможна */
+  .nav-arrow.hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  /* Стили для создания адаптивности */
+  @media (max-width: 650px) {
+    .nav-carousel-container {
+        display: none;
+    }
+  }
