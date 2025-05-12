@@ -1,0 +1,216 @@
+/* Стили для поля поиска городов*/
+
+.search-container {
+    position: relative;
+    min-width: 450px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 16px 48px;
+
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: none;
+    background: #f1f1f1;
+
+    font-size: 14px;
+    line-height: 100%;
+    color: #222;   
+  }
+
+  .search-input:focus-visible {
+    outline: 1px #ABC8EA solid;
+  }
+  
+.search-icon {
+    position: absolute;
+    top: 25px;
+    left: 16px; 
+    transform: translateY(-50%);
+}
+
+.clear-btn {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  padding: 0 5px;
+
+  background: none;
+  border: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  font-size: 20px;
+  cursor: pointer;
+  color: #767676;
+}
+  
+.clear-btn:hover {
+  color: #222;
+}
+
+.clear-btn.visible {
+  opacity: 1;
+}
+
+/* Стили для выпадающего списка при поиске */
+
+.city-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: none;
+
+  width: 100%;
+  min-height: 200px;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+  z-index: 10;
+  overflow: hidden;
+
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.city-dropdown.active {
+  max-height: 400px;
+  display: block;
+}
+
+.city-selector__selected {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  padding: 10px;
+}
+
+/* Стили для выбранных из списка городов */
+.city-selector__badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 5px 10px;
+
+  background: #f1f1f1;
+  border-radius: 20px;
+ 
+  font-size: 14px;
+}
+
+.city-selector__badge-remove {
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.city-selector__loader {
+  display: none;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+/* Стили для иконки загрузки */
+.city-selector__loader.active {
+  display: flex;
+}
+
+.city-selector__loader::after {
+  content: "";
+
+  width: 20px;
+  height: 20px;
+
+  border: 3px solid #e6e6e6;
+  border-top-color: #a7a7a7;
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
+}
+
+/* Стили для списка городов */
+.city-selector__list {
+  display: none;
+
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  max-height: 300px;
+
+  list-style: none;
+}
+
+.city-selector__list.active {
+  display: block;
+}
+
+/* Стилизованный скроллбар */
+.city-selector__list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.city-selector__list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.city-selector__list::-webkit-scrollbar-thumb {
+  background: #a7a7a7;
+  border-radius: 4px;
+}
+
+.city-selector__list::-webkit-scrollbar-thumb:hover {
+  background: #767676;
+}
+
+.city-selector__item {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.city-selector__item:hover {
+  background: #f1f1f1;
+}
+
+.city-selector__item.selected {
+  background: #f1f1f1;
+}
+
+.city-selector__save {
+  width: 100%;
+  padding: 10px;
+
+  background: #ABC8EA;
+  border: none;
+  transition: all 0.3s ease;
+
+  color: #222;
+  cursor: pointer;
+}
+
+.city-selector__save:hover {
+  background: #0656B4;
+  color: #DFE9F5;
+
+  transition: all 0.3s ease;
+}
+
+/* Анимация */
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Медиазапросы для адаптивности*/
+
+@media (max-width: 650px) {
+  .search-container {
+    display: none;
+  }
+}

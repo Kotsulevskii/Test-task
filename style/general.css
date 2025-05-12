@@ -1,0 +1,19 @@
+/* Стили для контейнеров и задания стандартных значений для элементов*/
+body {
+    margin: 0;
+
+    font-family: 'Open Sans';
+    line-height: 22px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+    min-width: 360px;
+    padding: 24px 16px;
+}
+
+
