@@ -268,54 +268,9 @@ class SearchCitySelector {
   
   // Сохранение в куки и отправка на ajax-сервер (заглушку)
   saveSelection() {
-    // Сохранение в cookies
-    this.saveToCookies();
-    
-    // Отправка на сервер-заглушку
-    this.sendToServer()
-      .then(response => {
-        console.log('Успешно сохранено на сервере:', response);
-        this.closeDropdown();
-      })
-      .catch(error => {
-        console.error('Ошибка сохранения:', error);
-        this.showError('Не удалось сохранить выбор');
-      });
+    console.log('Сохраненные города:', this.selectedCities);
+    this.closeDropdown();
   }
-  
-  // Сохранение выбранных городов в cookies
-  saveToCookies() {
-    const date = new Date();
-    date.setTime(date.getTime() + (24 * 60 * 60 * 1000)); // Куки на 1 день
-    const expires = "expires=" + date.toUTCString();
-    
-    const citiesJson = JSON.stringify(this.selectedCities);
-    
-    document.cookie = `selectedCities=${encodeURIComponent(citiesJson)}; ${expires}; path=/`;
-    
-    console.log('Данные сохранены в cookies');
-  }
-  
-    sendToServer() {
-      const url = 'https://jsonplaceholder.typicode.com/posts';
-      
-      return fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          userId: 1, 
-          selectedCities: this.selectedCities,
-        })
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      });
-    }
 }
 
 // Инициализация

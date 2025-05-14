@@ -14,6 +14,10 @@ class GeolocationService {
         timeout: 'Время ожидания истекло',
         notSupported: 'Геолокация не поддерживается вашим браузером'
       },
+      errorCodes: {
+        400: 'permissionDenied',
+        500: 'positionUnavailable',
+      },
       nominatimUrl: 'https://nominatim.openstreetmap.org/reverse',
       ...options
     };
@@ -77,22 +81,13 @@ class GeolocationService {
 
   // Обработка ошибок
   handleError(error) {
-    let message = this.options.errorMessages.default;
-
-    if (error.code) {
-      switch(error.code) {
-        case error.PERMISSION_DENIED:
-          message = this.options.errorMessages.permissionDenied;
-          break;
-        case error.POSITION_UNAVAILABLE:
-          message = this.options.errorMessages.positionUnavailable;
-          break;
-        case error.TIMEOUT:
-          message = this.options.errorMessages.timeout;
-          break;
-      }
+    const errorMessages = {
+      [error.PERMISSION_DENIED]: this.options.errorMessages.permissionDenied,
+      [error.POSITION_UNAVAILABLE]: this.options.errorMessages.positionUnavailable,
+      [error.TIMEOUT]: this.options.errorMessages.timeout
     }
 
+    const message = errorMessages[error.code] || this.options.errorMessages.default;
     this.showError(message);
   }
 
